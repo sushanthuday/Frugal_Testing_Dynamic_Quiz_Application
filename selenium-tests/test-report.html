@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application - Selenium Test Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e4e4e4;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #aaa;
+            font-size: 1.1rem;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card.passed {
+            border-left: 4px solid #00ff88;
+        }
+        
+        .card.failed {
+            border-left: 4px solid #ff4757;
+        }
+        
+        .card.info {
+            border-left: 4px solid #00d4ff;
+        }
+        
+        .card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .card.passed h3 { color: #00ff88; }
+        .card.failed h3 { color: #ff4757; }
+        .card.info h3 { color: #00d4ff; }
+        
+        .card p {
+            color: #888;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section {
+            background: #1e2a3a;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .section h2 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #0f3460;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h2::before {
+            content: '';
+            width: 4px;
+            height: 25px;
+            background: #00d4ff;
+            border-radius: 2px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #2a3a4a;
+        }
+        
+        th {
+            background: #0f2744;
+            color: #00d4ff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+        
+        tr:hover {
+            background: rgba(0, 212, 255, 0.05);
+        }
+        
+        .status-badge {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .status-passed {
+            background: rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+        }
+        
+        .status-failed {
+            background: rgba(255, 71, 87, 0.2);
+            color: #ff4757;
+        }
+        
+        .step-list {
+            list-style: none;
+        }
+        
+        .step-item {
+            background: #0f2744;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .step-item:hover {
+            background: #1a3a5c;
+            transform: translateX(5px);
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: #000;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-content h4 {
+            color: #fff;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .step-content p {
+            color: #888;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .step-status {
+            color: #00ff88;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .step-status::before {
+            content: '✓';
+            background: #00ff88;
+            color: #000;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .screenshot-item {
+            background: #0f2744;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .screenshot-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .screenshot-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #2a3a4a;
+        }
+        
+        .screenshot-item .caption {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .screenshot-item .caption h5 {
+            color: #00d4ff;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        
+        .screenshot-item .caption p {
+            color: #666;
+            font-size: 0.8rem;
+        }
+        
+        .env-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .env-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 15px;
+            background: #0f2744;
+            border-radius: 8px;
+        }
+        
+        .env-item .label {
+            color: #888;
+        }
+        
+        .env-item .value {
+            color: #00d4ff;
+            font-weight: 500;
+        }
+        
+        .log-viewer {
+            background: #0a1628;
+            border-radius: 10px;
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+        
+        .log-line {
+            padding: 3px 0;
+        }
+        
+        .log-info { color: #00d4ff; }
+        .log-warn { color: #ffa502; }
+        .log-error { color: #ff4757; }
+        .log-success { color: #00ff88; }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .recording-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .recording-link:hover {
+            transform: scale(1.05);
+        }
+        
+        .question-result {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .result-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+        
+        .result-correct {
+            background: rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+        }
+        
+        .result-incorrect {
+            background: rgba(255, 71, 87, 0.2);
+            color: #ff4757;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🧪 Selenium Test Report</h1>
+            <p>Dynamic Quiz Application - Automated Test Execution Results</p>
+            <p style="margin-top: 10px; color: #00d4ff;">Generated: January 6, 2026 at 10:24 PM IST</p>
+        </div>
+        
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="card passed">
+                <h3>1</h3>
+                <p>Tests Passed</p>
+            </div>
+            <div class="card failed">
+                <h3>0</h3>
+                <p>Tests Failed</p>
+            </div>
+            <div class="card info">
+                <h3>34.97s</h3>
+                <p>Execution Time</p>
+            </div>
+            <div class="card info">
+                <h3>12</h3>
+                <p>Screenshots</p>
+            </div>
+            <div class="card info">
+                <h3>1</h3>
+                <p>Video Recording</p>
+            </div>
+        </div>
+        
+        <!-- Test Execution Summary -->
+        <div class="section">
+            <h2>Test Execution Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Description</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>testCompleteQuizFlow</strong></td>
+                        <td>Complete end-to-end quiz taking flow with result verification</td>
+                        <td>34.97 seconds</td>
+                        <td><span class="status-badge status-passed">Passed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Test Steps -->
+        <div class="section">
+            <h2>Test Steps Documentation</h2>
+            <ul class="step-list">
+                <li class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Navigate to Landing Page</h4>
+                        <p>Opened the Quiz Application at <code>http://localhost:8080</code>. Verified page title is "Dynamic Quiz Application" and landing page elements are visible.</p>
+                        <div class="step-status">Screenshot: 01_LandingPage.png</div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Configure Quiz Options</h4>
+                        <p>Selected quiz configuration options:
+                            <br>• Category: <strong>General Knowledge</strong>
+                            <br>• Difficulty: <strong>Easy</strong>
+                            <br>• Number of Questions: <strong>5 Questions</strong>
+                        </p>
+                        <div class="step-status">Screenshot: 02_QuizConfigured.png</div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Start Quiz</h4>
+                        <p>Clicked the "Start Quiz" button. Verified quiz page is displayed with first question visible and timer countdown started.</p>
+                        <div class="step-status">Screenshot: 03_QuizStarted.png</div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Verify Timer Display</h4>
+                        <p>Confirmed countdown timer is working correctly. Timer shows 30 seconds for Easy difficulty level and counts down in real-time.</p>
+                        <div class="step-status">Screenshot: 04_Timer_Display.png</div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Answer All Questions (1-5)</h4>
+                        <p>Answered all 5 questions by selecting options:
+                            <br>• Q1: Selected Option A
+                            <br>• Q2: Selected Option B
+                            <br>• Q3: Selected Option C
+                            <br>• Q4: Selected Option D
+                            <br>• Q5: Selected Option A
+                            <br>Clicked "Next" button after each question.
+                        </p>
+                        <div class="step-status">Screenshots: 05_Question1-5_Answered.png</div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>Submit Quiz</h4>
+                        <p>Clicked "Submit Quiz" button after answering all questions. Verified transition to results page.</p>
+                        <div class="step-status">Screenshots: 06_BeforeSubmit.png, 07_ResultsPage.png</div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h4>Verify Score Display</h4>
+                        <p>Verified results page displays:
+                            <br>• Score percentage prominently displayed
+                            <br>• Correct answers count: 0 out of 5
+                            <br>• Total time taken: 10.8 seconds
+                            <br>• Average time per question: 2.2 seconds
+                        </p>
+                        <div class="step-status">Screenshot: 08_ScoreSummary.png</div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-number">8</div>
+                    <div class="step-content">
+                        <h4>Verify Charts Display</h4>
+                        <p>Confirmed both charts are rendered correctly:
+                            <br>• Performance Chart (Doughnut): Shows correct vs incorrect ratio
+                            <br>• Time Chart (Bar): Displays time spent on each question
+                        </p>
+                        <div class="step-status">Screenshot: 09_Charts.png</div>
+                    </div>
+                </li>
+                <li class="step-item">
+                    <div class="step-number">9</div>
+                    <div class="step-content">
+                        <h4>Verify Question Breakdown</h4>
+                        <p>Verified detailed breakdown of each question showing:
+                            <br>• Question text
+                            <br>• User's selected answer
+                            <br>• Correct answer (if different)
+                            <br>• Visual indicator (green ✓ for correct, red ✗ for incorrect)
+                        </p>
+                        <div class="step-status">Screenshot: 10_QuestionBreakdown.png</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Quiz Results -->
+        <div class="section">
+            <h2>Quiz Results Summary</h2>
+            <div class="summary-cards" style="margin-bottom: 20px;">
+                <div class="card info">
+                    <h3>0%</h3>
+                    <p>Final Score</p>
+                </div>
+                <div class="card passed">
+                    <h3>0</h3>
+                    <p>Correct Answers</p>
+                </div>
+                <div class="card failed">
+                    <h3>5</h3>
+                    <p>Incorrect Answers</p>
+                </div>
+                <div class="card info">
+                    <h3>10.8s</h3>
+                    <p>Total Time</p>
+                </div>
+            </div>
+            
+            <h3 style="color: #00d4ff; margin: 20px 0 15px;">Question-by-Question Breakdown</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Question</th>
+                        <th>Selected Answer</th>
+                        <th>Correct Answer</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>What animal is known as 'man's best friend'?</td>
+                        <td>Cat (A)</td>
+                        <td>Dog (B)</td>
+                        <td><div class="question-result"><span class="result-icon result-incorrect">✗</span> Incorrect</div></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>What is the largest ocean on Earth?</td>
+                        <td>Indian (B)</td>
+                        <td>Pacific (C)</td>
+                        <td><div class="question-result"><span class="result-icon result-incorrect">✗</span> Incorrect</div></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>How many legs does a spider have?</td>
+                        <td>10 (C)</td>
+                        <td>8 (B)</td>
+                        <td><div class="question-result"><span class="result-icon result-incorrect">✗</span> Incorrect</div></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>How many continents are there on Earth?</td>
+                        <td>8 (D)</td>
+                        <td>7 (C)</td>
+                        <td><div class="question-result"><span class="result-icon result-incorrect">✗</span> Incorrect</div></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>What is the primary language spoken in Brazil?</td>
+                        <td>Spanish (A)</td>
+                        <td>Portuguese (B)</td>
+                        <td><div class="question-result"><span class="result-icon result-incorrect">✗</span> Incorrect</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 15px; color: #888; font-style: italic;">
+                Note: The test intentionally selects the first available option (A) for each question to demonstrate the automation flow. 
+                The purpose is to verify the quiz functionality, not to achieve a high score.
+            </p>
+        </div>
+        
+        <!-- Screenshots Gallery -->
+        <div class="section">
+            <h2>Screenshots Gallery</h2>
+            <p style="color: #888; margin-bottom: 15px;">Click on any screenshot to view full size. All screenshots are saved in the <code>screenshots/</code> folder.</p>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="screenshots/01_LandingPage_20260106_222416.png" alt="Landing Page" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22180%22><rect fill=%22%230f2744%22 width=%22300%22 height=%22180%22/><text fill=%22%23666%22 x=%22150%22 y=%2290%22 text-anchor=%22middle%22>Screenshot</text></svg>'">
+                    <div class="caption">
+                        <h5>01 - Landing Page</h5>
+                        <p>Initial application load</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/02_QuizConfigured_20260106_222417.png" alt="Quiz Configured" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22180%22><rect fill=%22%230f2744%22 width=%22300%22 height=%22180%22/><text fill=%22%23666%22 x=%22150%22 y=%2290%22 text-anchor=%22middle%22>Screenshot</text></svg>'">
+                    <div class="caption">
+                        <h5>02 - Quiz Configured</h5>
+                        <p>Options selected</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/03_QuizStarted_20260106_222418.png" alt="Quiz Started" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22180%22><rect fill=%22%230f2744%22 width=%22300%22 height=%22180%22/><text fill=%22%23666%22 x=%22150%22 y=%2290%22 text-anchor=%22middle%22>Screenshot</text></svg>'">
+                    <div class="caption">
+                        <h5>03 - Quiz Started</h5>
+                        <p>First question displayed</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/04_Timer_Display_20260106_222419.png" alt="Timer Display" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22180%22><rect fill=%22%230f2744%22 width=%22300%22 height=%22180%22/><text fill=%22%23666%22 x=%22150%22 y=%2290%22 text-anchor=%22middle%22>Screenshot</text></svg>'">
+                    <div class="caption">
+                        <h5>04 - Timer Display</h5>
+                        <p>Countdown timer active</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/05_Question1_Answered_20260106_222420.png" alt="Question 1" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22180%22><rect fill=%22%230f2744%22 width=%22300%22 height=%22180%22/><text fill=%22%23666%22 x=%22150%22 y=%2290%22 text-anchor=%22middle%22>Screenshot</text></svg>'">
+                    <div class="caption">
+                        <h5>05 - Question 1 Answered</h5>
+                        <p>Option selected</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/07_ResultsPage_20260106_222430.png" alt="Results Page" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22180%22><rect fill=%22%230f2744%22 width=%22300%22 height=%22180%22/><text fill=%22%23666%22 x=%22150%22 y=%2290%22 text-anchor=%22middle%22>Screenshot</text></svg>'">
+                    <div class="caption">
+                        <h5>07 - Results Page</h5>
+                        <p>Final score displayed</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/09_Charts_20260106_222431.png" alt="Charts" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22180%22><rect fill=%22%230f2744%22 width=%22300%22 height=%22180%22/><text fill=%22%23666%22 x=%22150%22 y=%2290%22 text-anchor=%22middle%22>Screenshot</text></svg>'">
+                    <div class="caption">
+                        <h5>09 - Performance Charts</h5>
+                        <p>Doughnut & bar charts</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshots/10_QuestionBreakdown_20260106_222432.png" alt="Breakdown" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22180%22><rect fill=%22%230f2744%22 width=%22300%22 height=%22180%22/><text fill=%22%23666%22 x=%22150%22 y=%2290%22 text-anchor=%22middle%22>Screenshot</text></svg>'">
+                    <div class="caption">
+                        <h5>10 - Question Breakdown</h5>
+                        <p>Detailed answer review</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Screen Recording -->
+        <div class="section">
+            <h2>Screen Recording</h2>
+            <p style="color: #888; margin-bottom: 15px;">
+                A complete video recording of the test execution was captured using FFmpeg with the following specifications:
+            </p>
+            <div class="env-grid" style="margin-bottom: 20px;">
+                <div class="env-item">
+                    <span class="label">File Name</span>
+                    <span class="value">quiz_test_20260106_222414.avi</span>
+                </div>
+                <div class="env-item">
+                    <span class="label">Format</span>
+                    <span class="value">AVI (MJPEG Codec)</span>
+                </div>
+                <div class="env-item">
+                    <span class="label">File Size</span>
+                    <span class="value">35.75 MB</span>
+                </div>
+                <div class="env-item">
+                    <span class="label">Frame Rate</span>
+                    <span class="value">10 FPS</span>
+                </div>
+            </div>
+            <a href="recordings/quiz_test_20260106_222414.avi" class="recording-link">
+                🎬 View Screen Recording
+            </a>
+        </div>
+        
+        <!-- Environment Details -->
+        <div class="section">
+            <h2>Test Environment</h2>
+            <div class="env-grid">
+                <div class="env-item">
+                    <span class="label">Operating System</span>
+                    <span class="value">Windows</span>
+                </div>
+                <div class="env-item">
+                    <span class="label">Browser</span>
+                    <span class="value">Chrome 143.0.7499.170</span>
+                </div>
+                <div class="env-item">
+                    <span class="label">Java Version</span>
+                    <span class="value">JDK 17.0.17</span>
+                </div>
+                <div class="env-item">
+                    <span class="label">Maven Version</span>
+                    <span class="value">3.9.12</span>
+                </div>
+                <div class="env-item">
+                    <span class="label">Selenium Version</span>
+                    <span class="value">4.15.0</span>
+                </div>
+                <div class="env-item">
+                    <span class="label">TestNG Version</span>
+                    <span class="value">7.8.0</span>
+                </div>
+                <div class="env-item">
+                    <span class="label">Application URL</span>
+                    <span class="value">http://localhost:8080</span>
+                </div>
+                <div class="env-item">
+                    <span class="label">PHP Version</span>
+                    <span class="value">8.5.1</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Log Excerpt -->
+        <div class="section">
+            <h2>Execution Log (Excerpt)</h2>
+            <div class="log-viewer">
+                <div class="log-line log-info">2026-01-06 22:24:11 [main] INFO - Loading test configuration...</div>
+                <div class="log-line log-info">2026-01-06 22:24:11 [main] INFO - Configuration loaded successfully</div>
+                <div class="log-line log-info">2026-01-06 22:24:11 [main] INFO - Setting up WebDriver...</div>
+                <div class="log-line log-info">2026-01-06 22:24:14 [main] INFO - WebDriver initialized successfully with chrome browser</div>
+                <div class="log-line log-success">2026-01-06 22:24:14 [main] INFO - Screen recording started: recordings\quiz_test_20260106_222414.avi</div>
+                <div class="log-line log-info">2026-01-06 22:24:15 [main] INFO - ========================================</div>
+                <div class="log-line log-info">2026-01-06 22:24:15 [main] INFO - STARTING COMPLETE QUIZ TEST</div>
+                <div class="log-line log-info">2026-01-06 22:24:15 [main] INFO - ========================================</div>
+                <div class="log-line log-info">2026-01-06 22:24:15 [main] INFO - --- STEP 1: Navigate to Landing Page ---</div>
+                <div class="log-line log-info">2026-01-06 22:24:16 [main] INFO - Current URL: http://localhost:8080/</div>
+                <div class="log-line log-info">2026-01-06 22:24:16 [main] INFO - Page Title: Dynamic Quiz Application</div>
+                <div class="log-line log-success">2026-01-06 22:24:16 [main] INFO - Screenshot saved: 01_LandingPage.png</div>
+                <div class="log-line log-info">2026-01-06 22:24:16 [main] INFO - --- STEP 2: Configure Quiz Options ---</div>
+                <div class="log-line log-info">2026-01-06 22:24:16 [main] INFO - Selected category: General Knowledge</div>
+                <div class="log-line log-info">2026-01-06 22:24:17 [main] INFO - Selected difficulty: Easy</div>
+                <div class="log-line log-info">2026-01-06 22:24:17 [main] INFO - Selected questions count: 5 Questions</div>
+                <div class="log-line log-info">2026-01-06 22:24:17 [main] INFO - --- STEP 3: Start Quiz ---</div>
+                <div class="log-line log-info">2026-01-06 22:24:18 [main] INFO - Quiz started successfully</div>
+                <div class="log-line log-info">2026-01-06 22:24:18 [main] INFO - --- STEP 4: Answering Questions ---</div>
+                <div class="log-line log-info">2026-01-06 22:24:19 [main] INFO - === Question 1 of 5 ===</div>
+                <div class="log-line log-info">2026-01-06 22:24:19 [main] INFO - Question: What animal is known as 'man's best friend'?</div>
+                <div class="log-line log-info">2026-01-06 22:24:19 [main] INFO - Selecting option A: Cat</div>
+                <div class="log-line log-info">...</div>
+                <div class="log-line log-info">2026-01-06 22:24:28 [main] INFO - --- STEP 5: Submit Quiz ---</div>
+                <div class="log-line log-info">2026-01-06 22:24:30 [main] INFO - Quiz submitted, results page displayed</div>
+                <div class="log-line log-info">2026-01-06 22:24:30 [main] INFO - --- STEP 6: Verify Results ---</div>
+                <div class="log-line log-info">2026-01-06 22:24:30 [main] INFO - Score Percentage: 0%</div>
+                <div class="log-line log-info">2026-01-06 22:24:31 [main] INFO - --- STEP 7: Verify Charts Display ---</div>
+                <div class="log-line log-success">2026-01-06 22:24:31 [main] INFO - Performance chart (doughnut) is displayed</div>
+                <div class="log-line log-success">2026-01-06 22:24:31 [main] INFO - Time chart (bar) is displayed</div>
+                <div class="log-line log-info">2026-01-06 22:24:32 [main] INFO - --- STEP 8: Verify Question Breakdown ---</div>
+                <div class="log-line log-info">2026-01-06 22:24:33 [main] INFO - ========================================</div>
+                <div class="log-line log-success">2026-01-06 22:24:33 [main] INFO - QUIZ TEST COMPLETED SUCCESSFULLY</div>
+                <div class="log-line log-info">2026-01-06 22:24:33 [main] INFO - ========================================</div>
+                <div class="log-line log-success">2026-01-06 22:24:33 [main] INFO - All assertions passed - Test Complete!</div>
+                <div class="log-line log-success">2026-01-06 22:24:33 [main] INFO - Test PASSED: testCompleteQuizFlow</div>
+                <div class="log-line log-info">2026-01-06 22:24:33 [main] INFO - Tearing down WebDriver...</div>
+                <div class="log-line log-warn">2026-01-06 22:24:43 [main] WARN - Screen recording forcibly stopped</div>
+                <div class="log-line log-info">2026-01-06 22:24:44 [main] INFO - WebDriver closed successfully</div>
+                <div class="log-line log-info">2026-01-06 22:24:44 [main] INFO - Test Suite Execution Completed</div>
+            </div>
+            <p style="margin-top: 15px; color: #888;">
+                Full logs are available at: <code>logs/quiz-test.log</code> and <code>logs/selenium-test.log</code>
+            </p>
+        </div>
+        
+        <!-- Artifacts Summary -->
+        <div class="section">
+            <h2>Test Artifacts</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Artifact Type</th>
+                        <th>Location</th>
+                        <th>Count/Size</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>📸 Screenshots</td>
+                        <td><code>selenium-tests/screenshots/</code></td>
+                        <td>12 files</td>
+                        <td>PNG images captured at each significant test step</td>
+                    </tr>
+                    <tr>
+                        <td>🎬 Screen Recording</td>
+                        <td><code>selenium-tests/recordings/</code></td>
+                        <td>35.75 MB</td>
+                        <td>AVI video of complete test execution</td>
+                    </tr>
+                    <tr>
+                        <td>📋 Test Logs</td>
+                        <td><code>selenium-tests/logs/</code></td>
+                        <td>2 files</td>
+                        <td>Detailed execution logs (quiz-test.log, selenium-test.log)</td>
+                    </tr>
+                    <tr>
+                        <td>📊 Test Report</td>
+                        <td><code>selenium-tests/test-report.html</code></td>
+                        <td>This file</td>
+                        <td>Comprehensive HTML test report</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Generated by Selenium WebDriver Automation Framework</p>
+            <p style="margin-top: 5px;">Quiz Application v1.0 | Test Suite v1.0</p>
+            <p style="margin-top: 10px; color: #444;">© 2026 Dynamic Quiz Application</p>
+        </div>
+    </div>
+</body>
+</html>

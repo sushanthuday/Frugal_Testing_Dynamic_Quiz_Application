@@ -1,0 +1,137 @@
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - Loading test configuration...
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - Configuration loaded successfully
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - Setting up WebDriver...
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:14 [main] INFO  com.quizapp.tests.BaseTest - WebDriver initialized successfully with chrome browser
+2026-01-06 22:24:14 [main] INFO  com.quizapp.tests.BaseTest - Screen recording started: recordings\quiz_test_20260106_222414.avi
+2026-01-06 22:24:15 [main] INFO  com.quizapp.tests.QuizApplicationTest - ========================================
+2026-01-06 22:24:15 [main] INFO  com.quizapp.tests.QuizApplicationTest - STARTING COMPLETE QUIZ TEST
+2026-01-06 22:24:15 [main] INFO  com.quizapp.tests.QuizApplicationTest - ========================================
+2026-01-06 22:24:15 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 1: Navigate to Landing Page ---
+2026-01-06 22:24:15 [main] INFO  com.quizapp.tests.QuizApplicationTest - Navigating to Quiz URL: http://localhost:8080
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.QuizApplicationTest - Current URL: http://localhost:8080/
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.QuizApplicationTest - Page Title: Dynamic Quiz Application
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\01_LandingPage_20260106_222416.png
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.QuizApplicationTest - Landing page loaded successfully
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 2: Configure Quiz Options ---
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selected category: General Knowledge
+2026-01-06 22:24:17 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selected difficulty: Easy
+2026-01-06 22:24:17 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selected questions count: 5 Questions
+2026-01-06 22:24:17 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\02_QuizConfigured_20260106_222417.png
+2026-01-06 22:24:17 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 3: Start Quiz ---
+2026-01-06 22:24:17 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Start Quiz button
+2026-01-06 22:24:18 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\03_QuizStarted_20260106_222418.png
+2026-01-06 22:24:18 [main] INFO  com.quizapp.tests.QuizApplicationTest - Quiz started successfully
+2026-01-06 22:24:18 [main] INFO  com.quizapp.tests.QuizApplicationTest - Total questions: 5
+2026-01-06 22:24:18 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 4: Answering Questions ---
+2026-01-06 22:24:18 [main] INFO  com.quizapp.tests.QuizApplicationTest - === Question 1 of 5 ===
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question: What animal is known as 'man's best friend'?
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest - Timer: 29 seconds
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\04_Timer_Display_20260106_222419.png
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest - Number of options: 4
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option A: Cat
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option B: Dog
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option C: Fish
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option D: Bird
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selecting option A: Cat
+2026-01-06 22:24:20 [main] INFO  com.quizapp.tests.QuizApplicationTest - Option selected successfully
+2026-01-06 22:24:20 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\05_Question1_Answered_20260106_222420.png
+2026-01-06 22:24:20 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Next button
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest - === Question 2 of 5 ===
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question: What is the largest ocean on Earth?
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest - Timer: 30 seconds
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest - Number of options: 4
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option A: Atlantic
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option B: Indian
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option C: Pacific
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option D: Arctic
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selecting option B: Indian
+2026-01-06 22:24:22 [main] INFO  com.quizapp.tests.QuizApplicationTest - Option selected successfully
+2026-01-06 22:24:22 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\05_Question2_Answered_20260106_222422.png
+2026-01-06 22:24:22 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Next button
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - === Question 3 of 5 ===
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question: How many legs does a spider have?
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - Timer: 30 seconds
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - Number of options: 4
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option A: 6
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option B: 8
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option C: 10
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option D: 4
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selecting option C: 10
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - Option selected successfully
+2026-01-06 22:24:24 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\05_Question3_Answered_20260106_222423.png
+2026-01-06 22:24:24 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Next button
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - === Question 4 of 5 ===
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question: How many continents are there on Earth?
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - Timer: 30 seconds
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - Number of options: 4
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option A: 5
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option B: 6
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option C: 7
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option D: 8
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selecting option D: 8
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - Option selected successfully
+2026-01-06 22:24:26 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\05_Question4_Answered_20260106_222425.png
+2026-01-06 22:24:26 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Next button
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - === Question 5 of 5 ===
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question: What is the primary language spoken in Brazil?
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - Timer: 30 seconds
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - Number of options: 4
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option A: Spanish
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option B: Portuguese
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option C: English
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option D: French
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selecting option A: Spanish
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - Option selected successfully
+2026-01-06 22:24:28 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\05_Question5_Answered_20260106_222427.png
+2026-01-06 22:24:28 [main] INFO  com.quizapp.tests.QuizApplicationTest - All 5 questions answered
+2026-01-06 22:24:28 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 5: Submit Quiz ---
+2026-01-06 22:24:28 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\06_BeforeSubmit_20260106_222428.png
+2026-01-06 22:24:28 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Submit Quiz button
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\07_ResultsPage_20260106_222430.png
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - Quiz submitted, results page displayed
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 6: Verify Results ---
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - Score Percentage: 0%
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - Correct Answers: 0 out of 5
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - Correct: 0
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - Incorrect: 5
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.QuizApplicationTest - Total Time: 10.8s
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.QuizApplicationTest - Average Time per Question: 2.2s
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\08_ScoreSummary_20260106_222431.png
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 7: Verify Charts Display ---
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.QuizApplicationTest - Performance chart (doughnut) is displayed
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.QuizApplicationTest - Time chart (bar) is displayed
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\09_Charts_20260106_222431.png
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 8: Verify Question Breakdown ---
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question breakdown items found: 5
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Q1: CORRECT - What animal is known as 'man's best friend'?
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Q2: CORRECT - What is the largest ocean on Earth?
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Q3: CORRECT - How many legs does a spider have?
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Q4: CORRECT - How many continents are there on Earth?
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Q5: CORRECT - What is the primary language spoken in Brazil?
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\10_QuestionBreakdown_20260106_222432.png
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - ========================================
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - QUIZ TEST COMPLETED SUCCESSFULLY
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - ========================================
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Final Score: 0%
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Correct Answers: 5
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Incorrect Answers: 0
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Total Questions: 5
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Total Time: 10.8s
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Average Time: 2.2s
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - ========================================
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\11_FinalResults_20260106_222433.png
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - All assertions passed - Test Complete!
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.BaseTest - Test PASSED: testCompleteQuizFlow
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\testCompleteQuizFlow_PASSED_20260106_222433.png
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.BaseTest - Tearing down WebDriver...
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:43 [main] WARN  com.quizapp.tests.BaseTest - Screen recording forcibly stopped
+2026-01-06 22:24:44 [main] INFO  com.quizapp.tests.BaseTest - WebDriver closed successfully
+2026-01-06 22:24:44 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:44 [main] INFO  com.quizapp.tests.BaseTest - Test Suite Execution Completed
+2026-01-06 22:24:44 [main] INFO  com.quizapp.tests.BaseTest - ========================================

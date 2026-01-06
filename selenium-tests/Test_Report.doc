@@ -1,0 +1,633 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<title>Quiz Application - Selenium Test Report</title>
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+    @page {
+        size: A4;
+        margin: 1in;
+    }
+    body {
+        font-family: 'Calibri', 'Arial', sans-serif;
+        font-size: 11pt;
+        line-height: 1.5;
+        color: #333;
+    }
+    h1 {
+        font-size: 24pt;
+        color: #1a5276;
+        text-align: center;
+        border-bottom: 3px solid #1a5276;
+        padding-bottom: 10pt;
+        margin-bottom: 20pt;
+    }
+    h2 {
+        font-size: 16pt;
+        color: #1a5276;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5pt;
+        margin-top: 25pt;
+        margin-bottom: 15pt;
+    }
+    h3 {
+        font-size: 13pt;
+        color: #2874a6;
+        margin-top: 15pt;
+        margin-bottom: 10pt;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15pt 0;
+    }
+    th, td {
+        border: 1px solid #bdc3c7;
+        padding: 8pt 10pt;
+        text-align: left;
+    }
+    th {
+        background-color: #1a5276;
+        color: white;
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+    .header-info {
+        text-align: center;
+        margin-bottom: 30pt;
+    }
+    .header-info p {
+        margin: 5pt 0;
+        color: #666;
+    }
+    .summary-box {
+        background-color: #e8f6f3;
+        border: 1px solid #1abc9c;
+        padding: 15pt;
+        margin: 15pt 0;
+        border-radius: 5pt;
+    }
+    .pass {
+        color: #27ae60;
+        font-weight: bold;
+    }
+    .fail {
+        color: #e74c3c;
+        font-weight: bold;
+    }
+    .step-box {
+        background-color: #f8f9fa;
+        border-left: 4px solid #3498db;
+        padding: 10pt 15pt;
+        margin: 10pt 0;
+    }
+    .step-number {
+        display: inline-block;
+        background-color: #3498db;
+        color: white;
+        width: 25pt;
+        height: 25pt;
+        text-align: center;
+        line-height: 25pt;
+        border-radius: 50%;
+        font-weight: bold;
+        margin-right: 10pt;
+    }
+    .info-grid {
+        display: table;
+        width: 100%;
+    }
+    .info-row {
+        display: table-row;
+    }
+    .info-label {
+        display: table-cell;
+        width: 40%;
+        padding: 5pt;
+        font-weight: bold;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+    }
+    .info-value {
+        display: table-cell;
+        width: 60%;
+        padding: 5pt;
+        border: 1px solid #ddd;
+    }
+    .code {
+        font-family: 'Consolas', 'Courier New', monospace;
+        background-color: #f4f4f4;
+        padding: 2pt 5pt;
+        font-size: 10pt;
+    }
+    .footer {
+        margin-top: 40pt;
+        text-align: center;
+        color: #888;
+        font-size: 9pt;
+        border-top: 1px solid #ddd;
+        padding-top: 15pt;
+    }
+    ul {
+        margin: 10pt 0;
+        padding-left: 20pt;
+    }
+    li {
+        margin: 5pt 0;
+    }
+</style>
+</head>
+<body>
+
+<h1>🧪 SELENIUM TEST REPORT</h1>
+
+<div class="header-info">
+    <p><strong>Project:</strong> Dynamic Quiz Application</p>
+    <p><strong>Test Type:</strong> Automated End-to-End Testing</p>
+    <p><strong>Report Generated:</strong> January 6, 2026 at 10:24 PM IST</p>
+    <p><strong>Executed By:</strong> Selenium WebDriver Automation Framework</p>
+</div>
+
+<h2>1. EXECUTIVE SUMMARY</h2>
+
+<div class="summary-box">
+    <table>
+        <tr>
+            <td><strong>Total Tests Executed:</strong></td>
+            <td>1</td>
+            <td><strong>Tests Passed:</strong></td>
+            <td><span class="pass">1</span></td>
+        </tr>
+        <tr>
+            <td><strong>Tests Failed:</strong></td>
+            <td><span class="pass">0</span></td>
+            <td><strong>Tests Skipped:</strong></td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td><strong>Pass Rate:</strong></td>
+            <td><span class="pass">100%</span></td>
+            <td><strong>Total Execution Time:</strong></td>
+            <td>34.97 seconds</td>
+        </tr>
+    </table>
+</div>
+
+<p><strong>Overall Result:</strong> <span class="pass">✓ ALL TESTS PASSED</span></p>
+
+<h2>2. TEST ENVIRONMENT</h2>
+
+<table>
+    <tr>
+        <th>Component</th>
+        <th>Details</th>
+    </tr>
+    <tr>
+        <td>Operating System</td>
+        <td>Windows</td>
+    </tr>
+    <tr>
+        <td>Browser</td>
+        <td>Google Chrome 143.0.7499.170</td>
+    </tr>
+    <tr>
+        <td>Java Version</td>
+        <td>JDK 17.0.17</td>
+    </tr>
+    <tr>
+        <td>Maven Version</td>
+        <td>Apache Maven 3.9.12</td>
+    </tr>
+    <tr>
+        <td>Selenium WebDriver</td>
+        <td>4.15.0</td>
+    </tr>
+    <tr>
+        <td>TestNG Framework</td>
+        <td>7.8.0</td>
+    </tr>
+    <tr>
+        <td>Application URL</td>
+        <td>http://localhost:8080</td>
+    </tr>
+    <tr>
+        <td>PHP Version</td>
+        <td>8.5.1</td>
+    </tr>
+</table>
+
+<h2>3. TEST CASE DETAILS</h2>
+
+<h3>Test Case: testCompleteQuizFlow</h3>
+
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>Test Name</td>
+        <td>testCompleteQuizFlow</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>Complete end-to-end quiz taking flow with result verification</td>
+    </tr>
+    <tr>
+        <td>Priority</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td>Duration</td>
+        <td>34.97 seconds</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td><span class="pass">PASSED</span></td>
+    </tr>
+</table>
+
+<h2>4. TEST STEPS DOCUMENTATION</h2>
+
+<div class="step-box">
+    <p><span class="step-number">1</span> <strong>Navigate to Landing Page</strong></p>
+    <p>Opened the Quiz Application at <span class="code">http://localhost:8080</span>. Verified page title is "Dynamic Quiz Application" and landing page elements are visible.</p>
+    <p><em>Screenshot: 01_LandingPage.png</em></p>
+</div>
+
+<div class="step-box">
+    <p><span class="step-number">2</span> <strong>Configure Quiz Options</strong></p>
+    <p>Selected quiz configuration options:</p>
+    <ul>
+        <li>Category: <strong>General Knowledge</strong></li>
+        <li>Difficulty: <strong>Easy</strong></li>
+        <li>Number of Questions: <strong>5 Questions</strong></li>
+    </ul>
+    <p><em>Screenshot: 02_QuizConfigured.png</em></p>
+</div>
+
+<div class="step-box">
+    <p><span class="step-number">3</span> <strong>Start Quiz</strong></p>
+    <p>Clicked the "Start Quiz" button. Verified quiz page is displayed with first question visible and timer countdown started.</p>
+    <p><em>Screenshot: 03_QuizStarted.png</em></p>
+</div>
+
+<div class="step-box">
+    <p><span class="step-number">4</span> <strong>Verify Timer Display</strong></p>
+    <p>Confirmed countdown timer is working correctly. Timer shows 30 seconds for Easy difficulty level and counts down in real-time.</p>
+    <p><em>Screenshot: 04_Timer_Display.png</em></p>
+</div>
+
+<div class="step-box">
+    <p><span class="step-number">5</span> <strong>Answer All Questions (1-5)</strong></p>
+    <p>Answered all 5 questions by selecting options:</p>
+    <ul>
+        <li>Q1: Selected Option A</li>
+        <li>Q2: Selected Option B</li>
+        <li>Q3: Selected Option C</li>
+        <li>Q4: Selected Option D</li>
+        <li>Q5: Selected Option A</li>
+    </ul>
+    <p>Clicked "Next" button after each question.</p>
+    <p><em>Screenshots: 05_Question1-5_Answered.png</em></p>
+</div>
+
+<div class="step-box">
+    <p><span class="step-number">6</span> <strong>Submit Quiz</strong></p>
+    <p>Clicked "Submit Quiz" button after answering all questions. Verified transition to results page.</p>
+    <p><em>Screenshots: 06_BeforeSubmit.png, 07_ResultsPage.png</em></p>
+</div>
+
+<div class="step-box">
+    <p><span class="step-number">7</span> <strong>Verify Score Display</strong></p>
+    <p>Verified results page displays:</p>
+    <ul>
+        <li>Score percentage prominently displayed</li>
+        <li>Correct answers count</li>
+        <li>Total time taken: 10.8 seconds</li>
+        <li>Average time per question: 2.2 seconds</li>
+    </ul>
+    <p><em>Screenshot: 08_ScoreSummary.png</em></p>
+</div>
+
+<div class="step-box">
+    <p><span class="step-number">8</span> <strong>Verify Charts Display</strong></p>
+    <p>Confirmed both charts are rendered correctly:</p>
+    <ul>
+        <li>Performance Chart (Doughnut): Shows correct vs incorrect ratio</li>
+        <li>Time Chart (Bar): Displays time spent on each question</li>
+    </ul>
+    <p><em>Screenshot: 09_Charts.png</em></p>
+</div>
+
+<div class="step-box">
+    <p><span class="step-number">9</span> <strong>Verify Question Breakdown</strong></p>
+    <p>Verified detailed breakdown of each question showing question text, user's selected answer, correct answer, and visual indicators.</p>
+    <p><em>Screenshot: 10_QuestionBreakdown.png</em></p>
+</div>
+
+<h2>5. QUIZ RESULTS SUMMARY</h2>
+
+<table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>Final Score</td>
+        <td>0%</td>
+    </tr>
+    <tr>
+        <td>Correct Answers</td>
+        <td>0 out of 5</td>
+    </tr>
+    <tr>
+        <td>Incorrect Answers</td>
+        <td>5 out of 5</td>
+    </tr>
+    <tr>
+        <td>Total Time</td>
+        <td>10.8 seconds</td>
+    </tr>
+    <tr>
+        <td>Average Time per Question</td>
+        <td>2.2 seconds</td>
+    </tr>
+</table>
+
+<h3>Question-by-Question Breakdown</h3>
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Selected</th>
+        <th>Correct</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>What animal is known as 'man's best friend'?</td>
+        <td>Cat (A)</td>
+        <td>Dog (B)</td>
+        <td><span class="fail">✗ Incorrect</span></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>What is the largest ocean on Earth?</td>
+        <td>Indian (B)</td>
+        <td>Pacific (C)</td>
+        <td><span class="fail">✗ Incorrect</span></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>How many legs does a spider have?</td>
+        <td>10 (C)</td>
+        <td>8 (B)</td>
+        <td><span class="fail">✗ Incorrect</span></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>How many continents are there on Earth?</td>
+        <td>8 (D)</td>
+        <td>7 (C)</td>
+        <td><span class="fail">✗ Incorrect</span></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>What is the primary language spoken in Brazil?</td>
+        <td>Spanish (A)</td>
+        <td>Portuguese (B)</td>
+        <td><span class="fail">✗ Incorrect</span></td>
+    </tr>
+</table>
+
+<p><em><strong>Note:</strong> The test intentionally selects the first available option (A) for each question to demonstrate the automation flow. The purpose is to verify the quiz functionality, not to achieve a high score.</em></p>
+
+<h2>6. TEST ARTIFACTS</h2>
+
+<table>
+    <tr>
+        <th>Artifact Type</th>
+        <th>Location</th>
+        <th>Count/Size</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>📸 Screenshots</td>
+        <td><span class="code">selenium-tests/screenshots/</span></td>
+        <td>12 files</td>
+        <td>PNG images captured at each significant test step</td>
+    </tr>
+    <tr>
+        <td>🎬 Screen Recording</td>
+        <td><span class="code">selenium-tests/recordings/</span></td>
+        <td>35.75 MB</td>
+        <td>AVI video of complete test execution</td>
+    </tr>
+    <tr>
+        <td>📋 Test Logs</td>
+        <td><span class="code">selenium-tests/logs/</span></td>
+        <td>2 files</td>
+        <td>Detailed execution logs</td>
+    </tr>
+    <tr>
+        <td>📊 HTML Report</td>
+        <td><span class="code">selenium-tests/test-report.html</span></td>
+        <td>1 file</td>
+        <td>Interactive HTML test report</td>
+    </tr>
+</table>
+
+<h2>7. SCREEN RECORDING DETAILS</h2>
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>File Name</td>
+        <td>quiz_test_20260106_222414.avi</td>
+    </tr>
+    <tr>
+        <td>Format</td>
+        <td>AVI (MJPEG Codec)</td>
+    </tr>
+    <tr>
+        <td>File Size</td>
+        <td>35.75 MB</td>
+    </tr>
+    <tr>
+        <td>Frame Rate</td>
+        <td>10 FPS</td>
+    </tr>
+    <tr>
+        <td>Duration</td>
+        <td>~35 seconds</td>
+    </tr>
+</table>
+
+<h2>8. SCREENSHOTS CAPTURED</h2>
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Screenshot Name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>01_LandingPage.png</td>
+        <td>Initial application load - landing page</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>02_QuizConfigured.png</td>
+        <td>Quiz options selected (category, difficulty, count)</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>03_QuizStarted.png</td>
+        <td>First question displayed after starting quiz</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>04_Timer_Display.png</td>
+        <td>Countdown timer active</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>05_Question1_Answered.png</td>
+        <td>Question 1 with selected answer</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>05_Question2_Answered.png</td>
+        <td>Question 2 with selected answer</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>05_Question3_Answered.png</td>
+        <td>Question 3 with selected answer</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>05_Question4_Answered.png</td>
+        <td>Question 4 with selected answer</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>05_Question5_Answered.png</td>
+        <td>Question 5 with selected answer</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>06_BeforeSubmit.png</td>
+        <td>Before clicking submit button</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>07_ResultsPage.png</td>
+        <td>Results page displayed after submission</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>08_ScoreSummary.png</td>
+        <td>Score summary with statistics</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>09_Charts.png</td>
+        <td>Performance charts (doughnut and bar)</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>10_QuestionBreakdown.png</td>
+        <td>Detailed question-by-question breakdown</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>11_FinalResults.png</td>
+        <td>Final results summary</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>testCompleteQuizFlow_PASSED.png</td>
+        <td>Test pass confirmation screenshot</td>
+    </tr>
+</table>
+
+<h2>9. EXECUTION LOG EXCERPT</h2>
+
+<div style="background-color: #f4f4f4; padding: 15pt; font-family: 'Consolas', monospace; font-size: 9pt; border: 1px solid #ddd;">
+<p>2026-01-06 22:24:11 [main] INFO - Loading test configuration...</p>
+<p>2026-01-06 22:24:11 [main] INFO - Configuration loaded successfully</p>
+<p>2026-01-06 22:24:11 [main] INFO - Setting up WebDriver...</p>
+<p>2026-01-06 22:24:14 [main] INFO - WebDriver initialized successfully with chrome browser</p>
+<p style="color: green;">2026-01-06 22:24:14 [main] INFO - Screen recording started</p>
+<p>2026-01-06 22:24:15 [main] INFO - STARTING COMPLETE QUIZ TEST</p>
+<p>2026-01-06 22:24:15 [main] INFO - --- STEP 1: Navigate to Landing Page ---</p>
+<p>2026-01-06 22:24:16 [main] INFO - Current URL: http://localhost:8080/</p>
+<p>2026-01-06 22:24:16 [main] INFO - Page Title: Dynamic Quiz Application</p>
+<p>2026-01-06 22:24:16 [main] INFO - --- STEP 2: Configure Quiz Options ---</p>
+<p>2026-01-06 22:24:17 [main] INFO - --- STEP 3: Start Quiz ---</p>
+<p>2026-01-06 22:24:18 [main] INFO - --- STEP 4: Answering Questions ---</p>
+<p>2026-01-06 22:24:28 [main] INFO - --- STEP 5: Submit Quiz ---</p>
+<p>2026-01-06 22:24:30 [main] INFO - --- STEP 6: Verify Results ---</p>
+<p>2026-01-06 22:24:31 [main] INFO - --- STEP 7: Verify Charts Display ---</p>
+<p>2026-01-06 22:24:32 [main] INFO - --- STEP 8: Verify Question Breakdown ---</p>
+<p style="color: green;">2026-01-06 22:24:33 [main] INFO - QUIZ TEST COMPLETED SUCCESSFULLY</p>
+<p style="color: green;">2026-01-06 22:24:33 [main] INFO - All assertions passed - Test Complete!</p>
+<p style="color: green;">2026-01-06 22:24:33 [main] INFO - Test PASSED: testCompleteQuizFlow</p>
+<p>2026-01-06 22:24:33 [main] INFO - Tearing down WebDriver...</p>
+<p>2026-01-06 22:24:44 [main] INFO - WebDriver closed successfully</p>
+<p>2026-01-06 22:24:44 [main] INFO - Test Suite Execution Completed</p>
+</div>
+
+<p>Full logs available at: <span class="code">logs/quiz-test.log</span> and <span class="code">logs/selenium-test.log</span></p>
+
+<h2>10. CONCLUSION</h2>
+
+<div class="summary-box">
+    <p><strong>Test Execution Status:</strong> <span class="pass">SUCCESS</span></p>
+    <p>The automated Selenium test successfully verified the complete end-to-end functionality of the Dynamic Quiz Application. All test steps were executed without errors, and all assertions passed.</p>
+    <br>
+    <p><strong>Key Findings:</strong></p>
+    <ul>
+        <li>✓ Landing page loads correctly with all UI elements</li>
+        <li>✓ Quiz configuration options work as expected</li>
+        <li>✓ Timer countdown functions properly for Easy difficulty (30 seconds)</li>
+        <li>✓ Question navigation (Next button) works correctly</li>
+        <li>✓ Quiz submission processes successfully</li>
+        <li>✓ Results page displays score, statistics, and charts</li>
+        <li>✓ Question breakdown shows correct/incorrect answers</li>
+        <li>✓ All UI components render properly</li>
+    </ul>
+    <br>
+    <p><strong>Recommendation:</strong> The application is functioning as expected and is ready for further testing or deployment.</p>
+</div>
+
+<div class="footer">
+    <p>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
+    <p><strong>Generated by:</strong> Selenium WebDriver Automation Framework</p>
+    <p><strong>Project:</strong> Dynamic Quiz Application v1.0</p>
+    <p><strong>Test Suite:</strong> v1.0</p>
+    <p><strong>Report Date:</strong> January 6, 2026</p>
+    <p>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
+</div>
+
+</body>
+</html>

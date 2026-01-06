@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="34.968" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="webdriver.chrome.driver" value="C:\Users\utkar\.cache\selenium\chromedriver\win64\143.0.7499.169\chromedriver.exe"/>
+    <property name="log4j.configurationFile" value="src/test/resources/log4j2.xml"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\utkar\OneDrive\Desktop\Frugay\selenium-tests\target\test-classes;C:\Users\utkar\OneDrive\Desktop\Frugay\selenium-tests\target\classes;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-java\4.15.0\selenium-java-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-api\4.15.0\selenium-api-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.15.0\selenium-chrome-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.15.0\selenium-chromium-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-json\4.15.0\selenium-json-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.15.0\selenium-manager-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v117\4.15.0\selenium-devtools-v117-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v118\4.15.0\selenium-devtools-v118-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v119\4.15.0\selenium-devtools-v119-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.15.0\selenium-devtools-v85-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.15.0\selenium-edge-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.15.0\selenium-firefox-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-http\4.15.0\selenium-http-4.15.0.jar;C:\Users\utkar\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.15.0\selenium-ie-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.15.0\selenium-remote-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\com\google\guava\guava\32.1.2-jre\guava-32.1.2-jre.jar;C:\Users\utkar\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\utkar\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\utkar\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\utkar\.m2\repository\org\checkerframework\checker-qual\3.33.0\checker-qual-3.33.0.jar;C:\Users\utkar\.m2\repository\com\google\errorprone\error_prone_annotations\2.18.0\error_prone_annotations-2.18.0.jar;C:\Users\utkar\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-api\1.28.0\opentelemetry-api-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-context\1.28.0\opentelemetry-context-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.28.0\opentelemetry-exporter-logging-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.28.0\opentelemetry-sdk-metrics-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.28.0-alpha\opentelemetry-extension-incubator-1.28.0-alpha.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.28.0\opentelemetry-sdk-logs-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.28.0\opentelemetry-sdk-common-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.28.0\opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.28.0\opentelemetry-sdk-extension-autoconfigure-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.28.0-alpha\opentelemetry-api-events-1.28.0-alpha.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.28.0\opentelemetry-sdk-trace-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.28.0\opentelemetry-sdk-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.28.0-alpha\opentelemetry-semconv-1.28.0-alpha.jar;C:\Users\utkar\.m2\repository\net\bytebuddy\byte-buddy\1.14.5\byte-buddy-1.14.5.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-os\4.15.0\selenium-os-4.15.0.jar;C:\Users\utkar\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.15.0\selenium-safari-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-support\4.15.0\selenium-support-4.15.0.jar;C:\Users\utkar\.m2\repository\io\github\bonigarcia\webdrivermanager\5.6.2\webdrivermanager-5.6.2.jar;C:\Users\utkar\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\utkar\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\utkar\.m2\repository\com\github\docker-java\docker-java\3.3.4\docker-java-3.3.4.jar;C:\Users\utkar\.m2\repository\com\github\docker-java\docker-java-core\3.3.4\docker-java-core-3.3.4.jar;C:\Users\utkar\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\utkar\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\utkar\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\utkar\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\utkar\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\utkar\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\utkar\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\utkar\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\utkar\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.4\docker-java-transport-httpclient5-3.3.4.jar;C:\Users\utkar\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\utkar\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\utkar\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\utkar\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\utkar\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\utkar\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\utkar\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\utkar\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\utkar\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\utkar\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\utkar\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\utkar\.m2\repository\org\apache\logging\log4j\log4j-core\2.22.0\log4j-core-2.22.0.jar;C:\Users\utkar\.m2\repository\org\apache\logging\log4j\log4j-api\2.22.0\log4j-api-2.22.0.jar;C:\Users\utkar\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.22.0\log4j-slf4j-impl-2.22.0.jar;C:\Users\utkar\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\utkar\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\utkar\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\utkar\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\utkar\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\utkar\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\JAVA17\jdk-17.0.17+10\bin"/>
+    <property name="sun.java.command" value="C:\Users\utkar\AppData\Local\Temp\surefire15595140123480881871\surefirebooter-20260106222408507_3.jar C:\Users\utkar\AppData\Local\Temp\surefire15595140123480881871 2026-01-06T22-24-08_151-jvmRun1 surefire-20260106222408507_1tmp surefire_0-20260106222408507_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\utkar\OneDrive\Desktop\Frugay\selenium-tests\target\test-classes;C:\Users\utkar\OneDrive\Desktop\Frugay\selenium-tests\target\classes;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-java\4.15.0\selenium-java-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-api\4.15.0\selenium-api-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.15.0\selenium-chrome-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.15.0\selenium-chromium-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-json\4.15.0\selenium-json-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.15.0\selenium-manager-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v117\4.15.0\selenium-devtools-v117-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v118\4.15.0\selenium-devtools-v118-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v119\4.15.0\selenium-devtools-v119-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.15.0\selenium-devtools-v85-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.15.0\selenium-edge-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.15.0\selenium-firefox-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-http\4.15.0\selenium-http-4.15.0.jar;C:\Users\utkar\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.15.0\selenium-ie-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.15.0\selenium-remote-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\com\google\guava\guava\32.1.2-jre\guava-32.1.2-jre.jar;C:\Users\utkar\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\utkar\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\utkar\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\utkar\.m2\repository\org\checkerframework\checker-qual\3.33.0\checker-qual-3.33.0.jar;C:\Users\utkar\.m2\repository\com\google\errorprone\error_prone_annotations\2.18.0\error_prone_annotations-2.18.0.jar;C:\Users\utkar\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-api\1.28.0\opentelemetry-api-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-context\1.28.0\opentelemetry-context-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.28.0\opentelemetry-exporter-logging-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.28.0\opentelemetry-sdk-metrics-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.28.0-alpha\opentelemetry-extension-incubator-1.28.0-alpha.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.28.0\opentelemetry-sdk-logs-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.28.0\opentelemetry-sdk-common-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.28.0\opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.28.0\opentelemetry-sdk-extension-autoconfigure-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.28.0-alpha\opentelemetry-api-events-1.28.0-alpha.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.28.0\opentelemetry-sdk-trace-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.28.0\opentelemetry-sdk-1.28.0.jar;C:\Users\utkar\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.28.0-alpha\opentelemetry-semconv-1.28.0-alpha.jar;C:\Users\utkar\.m2\repository\net\bytebuddy\byte-buddy\1.14.5\byte-buddy-1.14.5.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-os\4.15.0\selenium-os-4.15.0.jar;C:\Users\utkar\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.15.0\selenium-safari-driver-4.15.0.jar;C:\Users\utkar\.m2\repository\org\seleniumhq\selenium\selenium-support\4.15.0\selenium-support-4.15.0.jar;C:\Users\utkar\.m2\repository\io\github\bonigarcia\webdrivermanager\5.6.2\webdrivermanager-5.6.2.jar;C:\Users\utkar\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\utkar\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\utkar\.m2\repository\com\github\docker-java\docker-java\3.3.4\docker-java-3.3.4.jar;C:\Users\utkar\.m2\repository\com\github\docker-java\docker-java-core\3.3.4\docker-java-core-3.3.4.jar;C:\Users\utkar\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\utkar\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\utkar\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\utkar\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\utkar\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\utkar\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\utkar\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\utkar\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\utkar\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.4\docker-java-transport-httpclient5-3.3.4.jar;C:\Users\utkar\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\utkar\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\utkar\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\utkar\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\utkar\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\utkar\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\utkar\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\utkar\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\utkar\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\utkar\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\utkar\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\utkar\.m2\repository\org\apache\logging\log4j\log4j-core\2.22.0\log4j-core-2.22.0.jar;C:\Users\utkar\.m2\repository\org\apache\logging\log4j\log4j-api\2.22.0\log4j-api-2.22.0.jar;C:\Users\utkar\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.22.0\log4j-slf4j-impl-2.22.0.jar;C:\Users\utkar\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\utkar\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\utkar\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\utkar\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\utkar\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\utkar\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\utkar"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\JAVA17\jdk-17.0.17+10"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\utkar\OneDrive\Desktop\Frugay\selenium-tests"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\utkar\AppData\Local\Temp\surefire15595140123480881871\surefirebooter-20260106222408507_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.17+10"/>
+    <property name="user.name" value="utkar"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.17+10"/>
+    <property name="localRepository" value="C:\Users\utkar\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\utkar\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.17"/>
+    <property name="user.dir" value="C:\Users\utkar\OneDrive\Desktop\Frugay\selenium-tests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\JAVA17\jdk-17.0.17+10\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\JAVA17\jdk-17.0.17+10\bin;C:\maven\apache-maven-3.9.12\bin;C:\JAVA17\jdk-17.0.17+10\bin;C:\maven\apache-maven-3.9.12\bin;C:\JAVA17\jdk-17.0.17+10\bin;C:\maven\apache-maven-3.9.12\bin;c:\Users\utkar\.vscode\extensions\vadimcn.vscode-lldb-1.12.1\bin;c:\Users\utkar\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\utkar\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Python312\Scripts\;C:\Python312\;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\MinGW\msys\1.0\bin;C:\MinGW\bin;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\MongoDB\mongosh-2.0.2-win32-x64;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Java\jdk1.8.0_202\bin;C:\Hadoop\bin;C:\Hadoop\sbin;C:\hbase\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\ProgramData\chocolatey\bin;C:\Program Files\CMake\bin;C:\Users\utkar\AppData\Roaming\Python\Python312\Scripts;C:\Users\utkar\vcpkg;C:\Users\utkar\vcpkg\installed\x64-windows\tools\drogon;C:\Users\utkar\vcpkg\installed\x64-windows\bin;C:\Users\utkar\vcpkg\installed\x64-windows\include;C:\Users\utkar\vcpkg\installed\x64-windows\lib;C:\Users\utkar\vcpkg\installed\x64-windows\include\drogon;C:\Users\utkar\vcpkg\installed\x64-windows\include\trantor;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\utkar\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Tesseract-OCR;C:\ffmpeg-7.1.1-full_build\ffmpeg-7.1.1-full_build\bin;C:\Program Files\Git\cmd;C:\php-8.5.1\;C:\Users\utkar\.cargo\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\utkar\AppData\Local\Microsoft\WindowsApps;C:\Users\utkar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2023.2.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.3\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.3\bin;C:\kafka_2.12-2.0.0\bin\windows;C:\Users\utkar\AppData\Local\Coursier\data\bin;C:\Java\jdk1.8.0_202\bin;C:\freeglut-MSVC-3.0.0-2.mp\freeglut\bin\x64;C:\Users\utkar\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\utkar\AppData\Local\Microsoft\WindowsApps;C:\Users\utkar\AppData\Roaming\npm;c:\Users\utkar\.vscode\extensions\ms-python.debugpy-2025.18.0-win32-x64\bundled\scripts\noConfigScripts;c:\Users\utkar\.vscode\extensions\vscjava.vscode-java-debug-0.58.4\bundled\scripts\noConfigScripts;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.17+10"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testCompleteQuizFlow" classname="com.quizapp.tests.QuizApplicationTest" time="18.017">
+    <system-out><![CDATA[2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - Loading test configuration...
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - Configuration loaded successfully
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - Setting up WebDriver...
+2026-01-06 22:24:11 [main] INFO  com.quizapp.tests.BaseTest - ========================================
+2026-01-06 22:24:14 [main] INFO  com.quizapp.tests.BaseTest - WebDriver initialized successfully with chrome browser
+2026-01-06 22:24:14 [main] INFO  com.quizapp.tests.BaseTest - Screen recording started: recordings\quiz_test_20260106_222414.avi
+2026-01-06 22:24:15 [main] INFO  com.quizapp.tests.QuizApplicationTest - ========================================
+2026-01-06 22:24:15 [main] INFO  com.quizapp.tests.QuizApplicationTest - STARTING COMPLETE QUIZ TEST
+2026-01-06 22:24:15 [main] INFO  com.quizapp.tests.QuizApplicationTest - ========================================
+2026-01-06 22:24:15 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 1: Navigate to Landing Page ---
+2026-01-06 22:24:15 [main] INFO  com.quizapp.tests.QuizApplicationTest - Navigating to Quiz URL: http://localhost:8080
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.QuizApplicationTest - Current URL: http://localhost:8080/
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.QuizApplicationTest - Page Title: Dynamic Quiz Application
+Current URL: http://localhost:8080/
+Page Title: Dynamic Quiz Application
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\01_LandingPage_20260106_222416.png
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.QuizApplicationTest - Landing page loaded successfully
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 2: Configure Quiz Options ---
+2026-01-06 22:24:16 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selected category: General Knowledge
+2026-01-06 22:24:17 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selected difficulty: Easy
+2026-01-06 22:24:17 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selected questions count: 5 Questions
+2026-01-06 22:24:17 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\02_QuizConfigured_20260106_222417.png
+2026-01-06 22:24:17 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 3: Start Quiz ---
+2026-01-06 22:24:17 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Start Quiz button
+2026-01-06 22:24:18 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\03_QuizStarted_20260106_222418.png
+2026-01-06 22:24:18 [main] INFO  com.quizapp.tests.QuizApplicationTest - Quiz started successfully
+2026-01-06 22:24:18 [main] INFO  com.quizapp.tests.QuizApplicationTest - Total questions: 5
+2026-01-06 22:24:18 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 4: Answering Questions ---
+2026-01-06 22:24:18 [main] INFO  com.quizapp.tests.QuizApplicationTest - === Question 1 of 5 ===
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question: What animal is known as 'man's best friend'?
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest - Timer: 29 seconds
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\04_Timer_Display_20260106_222419.png
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest - Number of options: 4
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option A: Cat
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option B: Dog
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option C: Fish
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option D: Bird
+2026-01-06 22:24:19 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selecting option A: Cat
+2026-01-06 22:24:20 [main] INFO  com.quizapp.tests.QuizApplicationTest - Option selected successfully
+2026-01-06 22:24:20 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\05_Question1_Answered_20260106_222420.png
+2026-01-06 22:24:20 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Next button
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest - === Question 2 of 5 ===
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question: What is the largest ocean on Earth?
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest - Timer: 30 seconds
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest - Number of options: 4
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option A: Atlantic
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option B: Indian
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option C: Pacific
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option D: Arctic
+2026-01-06 22:24:21 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selecting option B: Indian
+2026-01-06 22:24:22 [main] INFO  com.quizapp.tests.QuizApplicationTest - Option selected successfully
+2026-01-06 22:24:22 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\05_Question2_Answered_20260106_222422.png
+2026-01-06 22:24:22 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Next button
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - === Question 3 of 5 ===
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question: How many legs does a spider have?
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - Timer: 30 seconds
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - Number of options: 4
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option A: 6
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option B: 8
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option C: 10
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option D: 4
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selecting option C: 10
+2026-01-06 22:24:23 [main] INFO  com.quizapp.tests.QuizApplicationTest - Option selected successfully
+2026-01-06 22:24:24 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\05_Question3_Answered_20260106_222423.png
+2026-01-06 22:24:24 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Next button
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - === Question 4 of 5 ===
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question: How many continents are there on Earth?
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - Timer: 30 seconds
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - Number of options: 4
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option A: 5
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option B: 6
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option C: 7
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option D: 8
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selecting option D: 8
+2026-01-06 22:24:25 [main] INFO  com.quizapp.tests.QuizApplicationTest - Option selected successfully
+2026-01-06 22:24:26 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\05_Question4_Answered_20260106_222425.png
+2026-01-06 22:24:26 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Next button
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - === Question 5 of 5 ===
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question: What is the primary language spoken in Brazil?
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - Timer: 30 seconds
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - Number of options: 4
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option A: Spanish
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option B: Portuguese
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option C: English
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest -   Option D: French
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - Selecting option A: Spanish
+2026-01-06 22:24:27 [main] INFO  com.quizapp.tests.QuizApplicationTest - Option selected successfully
+2026-01-06 22:24:28 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\05_Question5_Answered_20260106_222427.png
+2026-01-06 22:24:28 [main] INFO  com.quizapp.tests.QuizApplicationTest - All 5 questions answered
+2026-01-06 22:24:28 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 5: Submit Quiz ---
+2026-01-06 22:24:28 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\06_BeforeSubmit_20260106_222428.png
+2026-01-06 22:24:28 [main] INFO  com.quizapp.tests.QuizApplicationTest - Clicking Submit Quiz button
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\07_ResultsPage_20260106_222430.png
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - Quiz submitted, results page displayed
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 6: Verify Results ---
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - Score Percentage: 0%
+Final Score: 0%
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - Correct Answers: 0 out of 5
+Correct Answers: 0 out of 5
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - Correct: 0
+2026-01-06 22:24:30 [main] INFO  com.quizapp.tests.QuizApplicationTest - Incorrect: 5
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.QuizApplicationTest - Total Time: 10.8s
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.QuizApplicationTest - Average Time per Question: 2.2s
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\08_ScoreSummary_20260106_222431.png
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 7: Verify Charts Display ---
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.QuizApplicationTest - Performance chart (doughnut) is displayed
+2026-01-06 22:24:31 [main] INFO  com.quizapp.tests.QuizApplicationTest - Time chart (bar) is displayed
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\09_Charts_20260106_222431.png
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - --- STEP 8: Verify Question Breakdown ---
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Question breakdown items found: 5
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Q1: CORRECT - What animal is known as 'man's best friend'?
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Q2: CORRECT - What is the largest ocean on Earth?
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Q3: CORRECT - How many legs does a spider have?
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Q4: CORRECT - How many continents are there on Earth?
+2026-01-06 22:24:32 [main] INFO  com.quizapp.tests.QuizApplicationTest - Q5: CORRECT - What is the primary language spoken in Brazil?
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\10_QuestionBreakdown_20260106_222432.png
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - ========================================
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - QUIZ TEST COMPLETED SUCCESSFULLY
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - ========================================
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Final Score: 0%
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Correct Answers: 5
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Incorrect Answers: 0
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Total Questions: 5
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Total Time: 10.8s
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - Average Time: 2.2s
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - ========================================
+
+========================================
+QUIZ RESULTS SUMMARY
+========================================
+Score: 0%
+Correct Answers: 5
+Incorrect Answers: 0
+Total Questions: 5
+Total Time: 10.8s
+Average Time per Question: 2.2s
+========================================
+
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.BaseTest - Screenshot saved: screenshots\11_FinalResults_20260106_222433.png
+2026-01-06 22:24:33 [main] INFO  com.quizapp.tests.QuizApplicationTest - All assertions passed - Test Complete!
+]]></system-out>
+    <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/C:/Users/utkar/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.22.0/log4j-slf4j-impl-2.22.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+Jan 06, 2026 10:24:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 143
+Jan 06, 2026 10:24:14 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 143.0.7499.170. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+</testsuite>
